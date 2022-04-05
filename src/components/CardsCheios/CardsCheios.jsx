@@ -1,7 +1,21 @@
 import Cards from "./Cards/Cards";
+import { useState } from 'react'
 
-function CardCheio({listTransactions, obj, setListTransactions}) {
+function CardCheio({listTransactions, setListTransactions}) {
     
+    const [filtrados, setFiltrados] = useState(listTransactions)
+    
+    function filtro(event) {
+        const filtradas = listTransactions.filter((item) =>
+            event.target.value === item.type
+        )
+        if(filtradas.length === 0){
+            setFiltrados(listTransactions)
+        }else{
+        setFiltrados(filtradas)
+        }
+    }
+
     return (
 
         <div className="containerCard">
@@ -10,13 +24,13 @@ function CardCheio({listTransactions, obj, setListTransactions}) {
             <h2>Resumo financeiro</h2>
             
             <div className="containerBtnFiltros">
-                <button id="btnTodos">Todos</button>
-                <button className="botao">Entradas</button>
-                <button className="botao">Despesas</button>
+                <button id="btnTodos" value='todos' onClick={filtro}>Todos</button>
+                <button className="botao" value='entrada' onClick={filtro}>Entradas</button>
+                <button className="botao" value='saida' onClick={filtro}>Despesas</button>
             </div>                
         </div>
 
-        <Cards listTransactions={listTransactions} obj={obj} setListTransactions={setListTransactions}/>        
+        <Cards listTransactions={filtrados} setListTransactions={setListTransactions}/>        
 
     </div>
 

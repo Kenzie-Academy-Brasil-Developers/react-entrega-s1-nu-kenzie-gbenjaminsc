@@ -7,7 +7,7 @@ function IndexPage({setHome}) {
         <div className="containerIndexPage">
 
             <section>
-                <img src="./assets/logoIndex.png" alt="logo"/>
+                <img src="./logoIndex.png" alt="logo"/>
                 <h2>Centralize o controle das suas finanças</h2>
                 <h6>de forma rápida e segura</h6>
                 <button onClick={() => setHome(false)}>Iniciar</button>

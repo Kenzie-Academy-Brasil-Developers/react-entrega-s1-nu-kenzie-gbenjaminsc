@@ -1,9 +1,9 @@
 import './styleCard.css'
 
-function Cards({listTransactions, setListTransactions, obj}) {
+function Cards({listTransactions, setListTransactions}) {
     
     function excluir(itemExcluir) {
-        const filtro = obj.filter((item) => {
+        const filtro = listTransactions.filter((item) => {
             return item !== itemExcluir
         })
         setListTransactions(filtro)
@@ -11,9 +11,9 @@ function Cards({listTransactions, setListTransactions, obj}) {
 
     return(
         <ul>
-            {listTransactions.map((item) =>{
+            {listTransactions.map((item, index) =>{
                 return(
-                    <li className={
+                    <li key={index} className={
                         item.type === 'entrada' ?
                         'entrada'
                         :
@@ -23,7 +23,7 @@ function Cards({listTransactions, setListTransactions, obj}) {
                         <h6 className='type'>{item.type}</h6>
                         <h6>{item.value}</h6>
                         <button className='btnExcluir' onClick={() => excluir(item)}>
-                            <img src='./assets/trash.png' alt='imgLixo'/>
+                            <img src='./trash.png' alt='imgLixo'/>
                         </button>
                     </li>
                 )

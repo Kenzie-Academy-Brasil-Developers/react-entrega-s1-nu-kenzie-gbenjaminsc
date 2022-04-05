@@ -8,7 +8,8 @@ function Form ({listTransactions, setListTransactions}){
     const [userSelect, setUserSelect] = useState('entrada')
     const [objeto, setObjeto]         = useState({})
 
-    function enviar(){
+    function enviar(event){
+        event.preventDefault()
         const obj = {description: userInput, type:userSelect, value:userNumber}
 
         setObjeto(obj)
@@ -16,7 +17,7 @@ function Form ({listTransactions, setListTransactions}){
     }
 
     return(
-        <form>
+        <form onSubmit={enviar}>
 
             <div className='containerDescricao'>
                 <p>Descrição</p>
@@ -44,7 +45,7 @@ function Form ({listTransactions, setListTransactions}){
                 </select>
             </div>
 
-            <button className='btnAdd' onClick={enviar}>Inserir Valor</button>
+            <button className='btnAdd'>Inserir Valor</button>
             
         </form>
     )

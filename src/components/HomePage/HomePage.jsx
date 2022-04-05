@@ -10,7 +10,7 @@ function HomePage({setHome , listTransactions, setListTransactions}) {
         
         <div>
             <section className='header'>
-                <img src="./assets/Nukenzie.png" alt="logo"/>
+                <img src="./Nukenzie.png" alt="logo"/>
                 <button onClick={() => setHome(true)}>Início</button>
             </section>
 
