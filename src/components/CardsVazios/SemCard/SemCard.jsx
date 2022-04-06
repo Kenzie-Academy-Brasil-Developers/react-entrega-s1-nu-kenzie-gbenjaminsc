@@ -4,7 +4,7 @@ function SemCard(props) {
 
     return(
         <div className='containerSemCard'>
-            <img src='./Nocard.png' alt='templateCard'/>
+            <img src='./NoCard.png' alt='templateCard'/>
         </div>
     )
 

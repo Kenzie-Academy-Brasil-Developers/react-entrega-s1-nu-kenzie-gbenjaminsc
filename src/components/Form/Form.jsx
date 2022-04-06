@@ -10,7 +10,7 @@ function Form ({listTransactions, setListTransactions}){
 
     function enviar(event){
         event.preventDefault()
-        const obj = {description: userInput, type:userSelect, value:userNumber}
+        const obj = {description: userInput, type:userSelect, value:userNumber, id:Date.now()}
 
         setObjeto(obj)
         setListTransactions([...listTransactions, obj])
@@ -25,24 +25,31 @@ function Form ({listTransactions, setListTransactions}){
                     type="text" 
                     placeholder="Digite aqui sua descrição" 
                     value={userInput}
+                    required
                     onChange={(event) => setUserInput(event.target.value)}
                 />
                 <p>Ex.: Compra de roupas</p>
             </div>
 
             <div className='containerValor'>
+                <div className='divValor'>
                 <p>Valor</p>
-                <input 
-                    type="number"
-                    placeholder='1 R$'
-                    value={userNumber} 
-                    onChange={(event) => setUserNumber(event.target.value)}
-                />
-                <select onChange={(event) => setUserSelect(event.target.value)}>
-                    <option>Selecionar</option>
-                    <option value="entrada">Entrada</option>
-                    <option value="saida">Saída</option>
-                </select>
+                    <input 
+                        type="number"
+                        placeholder='1 R$'
+                        value={userNumber} 
+                        required
+                        onChange={(event) => setUserNumber(event.target.value)}
+                    />
+                </div>
+
+                <div className='divSelect'>
+                    <p>Tipo de Valor</p>
+                    <select onChange={(event) => setUserSelect(event.target.value)}>
+                        <option value="entrada">Entrada</option>
+                        <option value="saida">Saída</option>
+                    </select>
+                </div>
             </div>
 
             <button className='btnAdd'>Inserir Valor</button>

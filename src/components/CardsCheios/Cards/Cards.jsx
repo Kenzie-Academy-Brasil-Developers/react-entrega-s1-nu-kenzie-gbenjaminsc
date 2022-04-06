@@ -1,12 +1,15 @@
 import './styleCard.css'
 
-function Cards({listTransactions, setListTransactions}) {
+function Cards({listTransactions, setListTransactions, listTransactionsOfc}) {
     
-    function excluir(itemExcluir) {
-        const filtro = listTransactions.filter((item) => {
-            return item !== itemExcluir
+    function excluir(event) {
+        const filtro = listTransactionsOfc.filter((item) => {
+            console.log(typeof item.id, typeof event.target.value)
+            return +item.id != +event.target.value
         })
+
         setListTransactions(filtro)
+
     }
 
     return(
@@ -24,9 +27,7 @@ function Cards({listTransactions, setListTransactions}) {
                             <h6 className='type'>{item.type}</h6>
                         </div>
                         <h6>R$ {item.value}</h6>
-                        <button className='btnExcluir' onClick={() => excluir(item)}>
-                            <img src='./trash.png' alt='imgLixo'/>
-                        </button>
+                        <button className='btnExcluir' value={item.id} onClick={excluir}></button>
                     </li>
                 )
             })}

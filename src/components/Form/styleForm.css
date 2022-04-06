@@ -45,7 +45,43 @@ form {
 
 .containerValor {
     width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.divValor > input {
+    background: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 5vh;
+    width: 40vw;
+    color: #868E96;
+    font-family: 'Nunito';
+    padding-left: 10px;
+}
+
+.divValor > p {
+    color: #212529;
+    font-family: 'Nunito';
+    align-self: flex-start;
+    font-size: 19px;
+
+    margin-bottom: 5px;
+    text-align: start;
+}
+
+.divSelect > p {
+    color: #212529;
+    font-family: 'Nunito';
+    align-self: flex-start;
+    font-size: 19px;
+
+    margin-bottom: 5px;    
+    text-align: start;
+}
+
 
 .containerValor > p{
     color: #212529;
@@ -73,10 +109,22 @@ form > button {
     background: #FD377E;
     border: 1.4px solid #FD377E;
     border-radius: 8px;
-    width: 90%;
+    width: 50%;
     height: 4vh;
 
     color: #FFFFFF;
     font-family: 'Nunito';
+}
+
+@media(min-width: 1024px) {
+
+    .divSelect > select {
+        width: 20vw;
+    }
+    
+    .divValor > input {
+        width: 15vw;
+    }
+
 }
 

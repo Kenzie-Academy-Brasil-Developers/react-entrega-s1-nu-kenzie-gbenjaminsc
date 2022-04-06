@@ -1,15 +1,20 @@
 import Cards from "./Cards/Cards";
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import userEvent from "@testing-library/user-event";
 
 function CardCheio({listTransactions, setListTransactions}) {
     
     const [filtrados, setFiltrados] = useState(listTransactions)
-    
+
+    useEffect(() =>{
+            setFiltrados(listTransactions)
+        },[listTransactions])
+        
     function filtro(event) {
         const filtradas = listTransactions.filter((item) =>
             event.target.value === item.type
         )
-        if(filtradas.length === 0){
+       if(filtradas.length === 0){
             setFiltrados(listTransactions)
         }else{
         setFiltrados(filtradas)
@@ -30,7 +35,7 @@ function CardCheio({listTransactions, setListTransactions}) {
             </div>                
         </div>
 
-        <Cards listTransactions={filtrados} setListTransactions={setListTransactions}/>        
+        <Cards listTransactions={filtrados || listTransactions} listTransactionsOfc={listTransactions} setListTransactions={setListTransactions}/>        
 
     </div>
 
