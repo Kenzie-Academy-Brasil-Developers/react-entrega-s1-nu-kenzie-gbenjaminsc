@@ -19,9 +19,11 @@ function Cards({listTransactions, setListTransactions}) {
                         :
                         'saida' 
                     }>
-                        <h3 className=''>{item.description}</h3>
-                        <h6 className='type'>{item.type}</h6>
-                        <h6>{item.value}</h6>
+                        <div className='nomeDesc'>
+                            <h3 className='descricao'>{item.description}</h3>
+                            <h6 className='type'>{item.type}</h6>
+                        </div>
+                        <h6>R$ {item.value}</h6>
                         <button className='btnExcluir' onClick={() => excluir(item)}>
                             <img src='./trash.png' alt='imgLixo'/>
                         </button>

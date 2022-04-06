@@ -1,0 +1,19 @@
+.containerSemCard {
+    width: 100%;
+}
+
+.containerSemCard > img {
+    width: 90%;
+    border-radius: 8px;
+}
+
+@media(min-width: 1024px) {
+    .containerSemCard {
+        width: 100%;
+    }
+    
+    .containerSemCard > img {
+        width: 70%;
+        border-radius: 8px;
+    }
+}

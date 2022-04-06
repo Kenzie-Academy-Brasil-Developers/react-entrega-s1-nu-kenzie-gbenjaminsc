@@ -4,7 +4,7 @@ function SemCard(props) {
 
     return(
         <div className='containerSemCard'>
-            {/*buscar img no figma*/}
+            <img src='./Nocard.png' alt='templateCard'/>
         </div>
     )
 

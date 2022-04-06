@@ -1,3 +1,5 @@
+import './styleTotalMoney.css'
+
 function TotalMoney({listTransactions}) {
 
     const total = listTransactions.reduce((valorAtual, acc) => {
@@ -12,7 +14,7 @@ function TotalMoney({listTransactions}) {
     return(
 
         <div className="containerTotal">
-            <h3>Valor total : {total}</h3>
+            <h3>Valor total:</h3> <p>$ {total}</p>
         </div>
     )
 }

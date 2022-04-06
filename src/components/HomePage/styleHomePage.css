@@ -1,0 +1,57 @@
+.homePage{
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFFFFF;
+}
+
+.header {
+    height: 8vh;
+    background: #F8F9FA;
+    box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header > button {
+    color: #5B6166;
+    font-family: 'Nunito';
+    width: 15%;
+    height: 50%;
+    background: #E9ECEF;
+    border: 1.4px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.containerEsquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+@media(min-width: 1024px) {
+    body{
+        width: 100%;
+    }
+    .mainContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .containerEsquerda {
+        width:70%;
+    }
+
+    .containerCard > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

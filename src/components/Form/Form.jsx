@@ -20,7 +20,7 @@ function Form ({listTransactions, setListTransactions}){
         <form onSubmit={enviar}>
 
             <div className='containerDescricao'>
-                <p>Descrição</p>
+                <p id='tituloDesc'>Descrição</p>
                 <input 
                     type="text" 
                     placeholder="Digite aqui sua descrição" 

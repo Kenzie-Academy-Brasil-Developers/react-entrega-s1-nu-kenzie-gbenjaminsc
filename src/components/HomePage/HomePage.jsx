@@ -8,7 +8,7 @@ function HomePage({setHome , listTransactions, setListTransactions}) {
 
     return (
         
-        <div>
+        <div className='homePage'>
             <section className='header'>
                 <img src="./Nukenzie.png" alt="logo"/>
                 <button onClick={() => setHome(true)}>Início</button>

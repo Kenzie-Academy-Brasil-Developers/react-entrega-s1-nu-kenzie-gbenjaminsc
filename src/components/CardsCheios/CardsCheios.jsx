@@ -24,7 +24,7 @@ function CardCheio({listTransactions, setListTransactions}) {
             <h2>Resumo financeiro</h2>
             
             <div className="containerBtnFiltros">
-                <button id="btnTodos" value='todos' onClick={filtro}>Todos</button>
+                <button className="botao" value='todos' onClick={filtro}>Todos</button>
                 <button className="botao" value='entrada' onClick={filtro}>Entradas</button>
                 <button className="botao" value='saida' onClick={filtro}>Despesas</button>
             </div>                

@@ -1,0 +1,82 @@
+form {
+    width: 90%;
+    border: 1px solid #E9ECEF;
+    box-sizing: border-box;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerDescricao {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerDescricao > p {
+    color: #868E96;
+    align-self: flex-start;
+    font-family: 'Nunito';
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+#tituloDesc {
+    color: #212529;
+    font-family: 'Nunito';
+    align-self: flex-start;
+    font-size: 19px;
+
+    margin-bottom: 5px;
+}
+
+.containerDescricao > input {
+    background: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 5vh;
+
+    color: #868E96;
+    font-family: 'Nunito';
+    padding-left: 10px;
+}
+
+.containerValor {
+    width: 90%;
+}
+
+.containerValor > p{
+    color: #212529;
+    align-self: flex-start;
+    font-family: 'Nunito';
+    font-size: 19px;
+    margin-bottom: 5px;
+}
+
+.containerValor > input, select {
+    background: #F8F9FA;
+    border: 2px solid #F8F9FA;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 5vh;
+
+    color: #868E96;
+    font-family: 'Nunito';
+    padding-left: 10px;
+}
+
+form > button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: #FD377E;
+    border: 1.4px solid #FD377E;
+    border-radius: 8px;
+    width: 90%;
+    height: 4vh;
+
+    color: #FFFFFF;
+    font-family: 'Nunito';
+}
+
